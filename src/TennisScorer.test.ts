@@ -66,4 +66,17 @@ describe('Tennis Score', () => {
       expect(answer).toBe("Deuce")
     }))
   })
+
+  it('answers Deuce for score 4-4', () => {
+    assert(property(string(), () => {
+      // Arrange
+      const tennisScorer = new TennisScorer()
+
+      // Act
+      const answer = tennisScorer.announceScore(4,4)
+
+      // Assert
+      expect(answer).toBe("Deuce")
+    }))
+  })
 })
