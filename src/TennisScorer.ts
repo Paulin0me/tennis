@@ -8,6 +8,9 @@ const score = new Map<number, string>([
 
 export class TennisScorer {
   public announceScore(servingPlayer: number, receivingPlayer: number): string {
+    if(servingPlayer === 3 && receivingPlayer === 3) {
+      return "Deuce"
+    }
     return score.get(servingPlayer) + "-" + score.get(receivingPlayer)
   }
 }
