@@ -40,4 +40,17 @@ describe('Tennis Score', () => {
       expect(answer).toBe("Fifteen-Thirty")
     }))
   })
+
+  it('answers Forty-Thirty for score 3-2', () => {
+    assert(property(string(), () => {
+      // Arrange
+      const tennisScorer = new TennisScorer()
+
+      // Act
+      const answer = tennisScorer.announceScore(3,2)
+
+      // Assert
+      expect(answer).toBe("Forty-Thirty")
+    }))
+  })
 })
