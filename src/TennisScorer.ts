@@ -1,5 +1,6 @@
 const score = new Map<number, string>([
   [0, "Love"],
+  [1, 'Fifteen']
 ]);
 
 
